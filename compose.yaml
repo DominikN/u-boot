@@ -1,0 +1,11 @@
+services:
+  build-u-boot:
+    build: .
+    volumes:
+      - ./:/uboot
+    command:
+      - bash
+      - -c
+      - |
+        make rpi_arm64_defconfig
+        make CROSS_COMPILE=aarch64-linux-gnu-

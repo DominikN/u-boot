@@ -55,3 +55,10 @@ CONFIG_VIDEO_BCM2835=y
 CONFIG_CONSOLE_SCROLL_LINES=10
 CONFIG_PHYS_TO_BUS=y
 CONFIG_OF_LIBFDT_OVERLAY=y
+
+# silent boot: https://www.exceptionlife.com/raspberrypi/question/9401/how-can-i-disable-the-serial-console-on-distributions-that-use-u-boot
+CONFIG_BOOTDELAY=-2
+CONFIG_SILENT_CONSOLE=y
+CONFIG_SYS_DEVICE_NULLDEV=y
+CONFIG_SILENT_CONSOLE_UPDATE_ON_SET=y
+CONFIG_SILENT_U_BOOT_ONLY=y

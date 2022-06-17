@@ -3,6 +3,23 @@
 # (C) Copyright 2000 - 2013
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
 
+============================================
+Building a custom u-boot that doesn't use UART0 (for silent boot). Based on [this guide](https://www.exceptionlife.com/raspberrypi/question/9401/how-can-i-disable-the-serial-console-on-distributions-that-use-u-boot)
+
+
+Quick start:
+
+1. Building `u-boot.bin`
+
+```
+docker compose up
+```
+
+2. Copy `u-boot.bin` on Raspberry Pi 4 SD card and replace `/boot/firmware/uboot_rpi_4.bin`
+
+============================================
+
+
 Summary:
 ========
 
