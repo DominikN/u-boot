@@ -11,8 +11,17 @@ Quick start:
 
 1. Building `u-boot.bin`
 
+a. Docker Compose
+
 ```
 docker compose up
+```
+
+b. Manual
+
+```
+docker buildx build -t uboot-builder .
+docker run --rm -it --volume ${pwd}/.:/uboot uboot-builder bash -c "make rpi_4_defconfig &&  make CROSS_COMPILE=aarch64-linux-gnu-"
 ```
 
 2. Copy `u-boot.bin` on Raspberry Pi 4 SD card and replace `/boot/firmware/uboot_rpi_4.bin`

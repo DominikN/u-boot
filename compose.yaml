@@ -7,5 +7,5 @@ services:
       - bash
       - -c
       - |
-        make rpi_arm64_defconfig
+        make rpi_4_defconfig
         make CROSS_COMPILE=aarch64-linux-gnu-
